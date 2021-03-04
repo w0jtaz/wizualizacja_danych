@@ -59,7 +59,7 @@ print(a)
 import math
 
 przyklad1 = print(math.e ** 10)
-przyklad2 = print(math.log(5 + (math.sin(2)) * 8) ** 1 / 6)
+przyklad2 = print(math.log(5 + (math.sin(8)) ** 2) ** (1/6))
 przyklad3 = print(math.floor(3.55))
 przyklad4 = print(math.ceil(4.80))
 
