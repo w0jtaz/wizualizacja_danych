@@ -61,15 +61,15 @@ while licznik < 10:
 print(lista_liczb)
 
 #Zadanie 9
-for x in [
-    "O" * 6,
-    "O"+" "+" "+" "+" "+"O",
-    "O"+" "+" "+" "+" "+"O",
-    "O"+" "+" "+" "+" "+"O",
-    "O"+" "+" "+" "+" "+"O",
-    "O" * 6,
-]:
-    print('{:^6}'.format(x))
+for i in range(6):
+    for j in range(6):
+        if (i == 0 or i == 5) or (j == 0 or j == 5):
+            if j == 5:
+                print('O')
+            else:
+                print('O', end='')
+        else:
+            print(' ', end='')
 
 #Zadanie 10
 x = input("Podaj liczbę: ")
