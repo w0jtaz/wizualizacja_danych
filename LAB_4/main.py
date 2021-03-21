@@ -19,3 +19,16 @@ with open('python.txt', 'r') as plik:
         print(linia, end='')
 
 #Zadanie 4
+class NaZakupy():
+    nazwa_produktu = ""
+    ilosc = 0
+    jednostka_miary = ""
+    cena_jed = 0
+    produkt = NaZakupy()
+    def wyswietl_produkt(self):
+        return produkt.nazwa_produktu
+    def ile_produktu(self):
+        return produkt.ilosc, produkt.jednostka_miary
+    def ile_kosztuje(self):
+        return produkt.cena_jed * produkt.ilosc
+
