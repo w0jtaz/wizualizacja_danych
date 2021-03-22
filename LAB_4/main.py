@@ -24,11 +24,25 @@ class NaZakupy():
     ilosc = 0
     jednostka_miary = ""
     cena_jed = 0
-    produkt = NaZakupy()
-    def wyswietl_produkt(self):
-        return produkt.nazwa_produktu
-    def ile_produktu(self):
-        return produkt.ilosc, produkt.jednostka_miary
-    def ile_kosztuje(self):
-        return produkt.cena_jed * produkt.ilosc
 
+    def __init__(self, nazwa_produktu, ilosc, jednostka_miary, cena_jed):
+        self.nazwa_produktu = nazwa_produktu
+        self.ilosc = ilosc
+        self.jednostka_miary = jednostka_miary
+        self.cena_jed = cena_jed
+    def wyswietl_produkt(self):
+        print(self.nazwa_produktu, self.ilosc, self.jednostka_miary, self.cena_jed)
+    def ile_produktu(self):
+        print(str(self.ilosc) + " " + self.jednostka_miary)
+    def ile_kosztuje(self):
+        kwota = self.cena_jed * self.ilosc
+        print(kwota)
+
+produkt = NaZakupy("Banany", 2, "Kg", 5.99)
+produkt.wyswietl_produkt()
+produkt.ile_produktu()
+produkt.ile_kosztuje()
+
+#Zadanie 5
+
+#Zadanie 6
