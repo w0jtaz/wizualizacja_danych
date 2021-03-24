@@ -88,5 +88,36 @@ ciag.pobierz_elementy(2, 3, 10)
 ciag.policz_sume()
 ciag.wyswietl_dane()
 
-
 #Zadanie 6
+class Robaczek():
+    x = 0
+    y = 0
+    krok = 1
+
+    def __init__(self, x, y, krok):
+        self.x = x
+        self.y = y
+        self.krok = krok
+
+    def idz_w_gore(self, ile_krokow):
+        self.y += (ile_krokow*self.krok)
+
+    def idz_w_dol(self, ile_krokow):
+        self.y -= (ile_krokow*self.krok)
+
+    def idz_w_prawo(self, ile_krokow):
+        self.x += (ile_krokow*self.krok)
+
+    def idz_w_lewo(self, ile_krokow):
+        self.y -= (ile_krokow*self.krok)
+
+    def pokaz_gdzie_jestes(self):
+        print("Pozycja robaczka to "+ "X:" + str(self.x) + " Y:" + str(self.y))
+
+worms = Robaczek(0,0,4)
+
+worms.idz_w_gore(5)
+worms.idz_w_dol(1)
+worms.idz_w_prawo(7)
+worms.idz_w_lewo(2)
+worms.pokaz_gdzie_jestes()
