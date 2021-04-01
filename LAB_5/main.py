@@ -49,4 +49,33 @@ print(cieply_sweter.kolor)
 print(cieply_sweter.dla_kogo)
 
 #Zadanie 2
+class Kwadrat():
 
+    def __init__(self, x):
+        self.x = x
+        self.y = x
+
+    def __str__(self):
+        return "Kwadrat o długości boku równej {}".format(self.x)
+
+    def pole(self):
+        return self.x * self.y
+
+    def obwod(self):
+        return 2 * self.x + 2 * self.y
+
+    def dodaj_opis(self, tekst):
+        self.opis = tekst
+
+    def skalowanie(self, czynnik):
+        self.x = self.x * czynnik
+        self.y = self.y * czynnik
+
+    def __add__(self, other):
+       return self.pole() + self.obwod()
+
+kwadrat = Kwadrat(5)
+print(kwadrat)
+
+kwadrat2 = Kwadrat(kwadrat.pole()+kwadrat.obwod())
+print(kwadrat2)
