@@ -25,6 +25,24 @@ print(tablica(20))
 def potega(n, m):
     a = np.logspace(start=1,num=m, stop=m, base=n, dtype='int')
     return a
-print(potega(2, 8))
+print(potega(2, 4))
 
+#Zadanie 5
+def wektor(dlugosc):
+    macierz = np.diag([x for x in range(dlugosc, 0, -1)], 2)
+    return macierz
 
+print(wektor(8))
+
+#Zadanie 6
+tab = np.array([['P', 'I', 'W', 'O'], ['O', 'I', 'E', 'K'], ['L', 'A', 'E', 'A'], ['E', 'L', 'K', 'S']])
+print(tab)
+
+#Zadanie 7
+
+#Zadanie 8
+
+#Zadanie 9
+ciag = np.arange(1, 125, 5)
+ciag = ciag.reshape((5,5))
+print(ciag)
