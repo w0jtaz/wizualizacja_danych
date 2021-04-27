@@ -4,8 +4,8 @@ import xlrd
 import openpyxl
 
 #Zadanie 1
-xlsx = pd.ExcelFile('datasets/imiona.xlsx')
-df = pd.read_excel(xlsx, header=0)
+# xlsx = pd.ExcelFile('datasets/imiona.xlsx')
+# df = pd.read_excel(xlsx, header=0)
 # print(df)
 
 #Zadanie 2
@@ -17,3 +17,6 @@ df = pd.read_excel(xlsx, header=0)
 # print(df.sort_values('Liczba', ascending=False).groupby(['Rok', 'Plec']).first())
 # print(df.groupby(['Plec', 'Imie']).agg({'Liczba': ['sum']}).sort_values(('Liczba', 'sum'), ascending=False).iloc[[0, 1]])
 
+#Zadanie 3
+df = pd.read_csv('datasets/zamowienia.csv', header=0, sep=';')
+print(df)
