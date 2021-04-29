@@ -45,3 +45,5 @@ df = pd.DataFrame(ts)
 df['MA'] = df.rolling(window=50).mean()
 df.plot()
 plt.show()
+
+
