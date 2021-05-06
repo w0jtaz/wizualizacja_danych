@@ -37,8 +37,8 @@ plt.title('Liczba urodzeń z podziałem na płeć')
 plt.show()
 
 #Zadanie 4
-dane = pd.read_csv("zamowienia.csv",sep=';')
-suma =  dane.groupby('Sprzedawca').agg({'Utarg':['sum']})
-suma.plot.bar()
-plt.xticks(rotation=0)
+df = pd.read_csv('zamowienia.csv', delimiter=';')
+policzone = df.groupby('Sprzedawca').size()
+policzone.plot.bar(figsize=(6,9))
+plt.ylabel("liczba zamówień")
 plt.show()
