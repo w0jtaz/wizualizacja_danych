@@ -40,16 +40,31 @@ import matplotlib.pyplot as plt
 # plt.ylabel('cos(x)')
 # plt.show()
 
-#Zadanie 4
-x = np.arange(0, 30, 0.1)
-y1 = np.sin(-x)
-y2 = np.sin(x)+2
+# #Zadanie 4
+# x = np.arange(0, 30, 0.1)
+# y1 = np.sin(-x)
+# y2 = np.sin(x)+2
+#
+# plt.plot(x, y1, '-',  label='sin(x)')
+# plt.plot(x, y2, '-',  label='sin(x)')
+# plt.title('Wartość sin(x), sin(x)')
+# plt.legend(loc=6)
+# plt.xlabel('x')
+# plt.ylabel('sin(x)')
+# plt.show()
 
-plt.plot(x, y1, '-',  label='sin(x)')
-plt.plot(x, y2, '-',  label='sin(x)')
-plt.title('Wartość sin(x), sin(x)')
-plt.legend(loc=6)
-plt.xlabel('x')
-plt.ylabel('sin(x)')
+# #Zadanie 5
+df = pd.read_csv("iris.data", names=["sepal len", "sepal wid", "petal len", "petal wid", "class"])
+df = pd.DataFrame(df)
+df = df[["sepal len", "sepal wid", "class"]]
+plt.xlabel("sepal length")
+plt.ylabel("sepal width")
+data = {"a": df["sepal len"], "b": df["sepal wid"], "c": np.random.randint(0, 150, 150)}
+data["d"] = np.abs(data["a"]-data["b"])
+plt.scatter("a", "b", c="c", s="d", data=data)
+plt.title("Iris sepal length and width")
 plt.show()
 
+#Zadanie 6
+# data = pd.ExcelFile("imiona.xlsx")
+# df = pd.read_excel(data, header=0)
